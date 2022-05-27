@@ -1,0 +1,725 @@
+/* ========== START UP START ========== */  
+html {
+    scroll-behavior: smooth !important;
+    transition: all ease-in-out 0.4s;
+}
+.scroll{
+    transition: all ease-in-out 0.4s;
+}
+body{
+    background-color: var(--major-color) !important;
+}
+:root{
+    --major-color: white;
+    --ttitle-color: #2a404e;
+    --pp-color: #7e7e7e;
+    --hh4-color: #2a404e;
+    --second-color: #2e3e4e;
+}
+#icon{
+    width: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.dark-theme{
+    --major-color: rgb(24, 24, 24);
+    --ttitle-color: #ef664d;
+    --pp-color: rgb(238, 231, 216);
+    --hh4-color: rgb(238, 231, 216);
+    --second-color: #172027;
+    transition: all ease-in-out 0.4s !important;
+}
+.dark-theme:hover #headerback{
+    opacity: 0.8;
+}
+/* ========== START UP END ========== */  
+
+/* ========== FONTS ========== */    
+@font-face {
+    font-family: 'Open Sans';
+    src: url(Fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'Arvo';
+    src: url(Fonts/Arvo-Regular.ttf);
+}
+/* ========== MEDIA (540) START ========== */
+@media only screen and (max-width: 540px) {
+    /*-- HEADER START --*/
+    .logo:hover{
+        transition: all ease-in-out 0.4s !important;
+        transform: none !important;
+        border-bottom: none !important;
+    }
+    #icon{
+        margin-left: 40px !important;
+    }
+    .logo:after{
+        display: none;
+    }
+    /*-- NAV START --*/
+    .navbar{
+        padding-top: 0px !important;
+        transition: all ease-in-out 0.4s !important;
+        margin-top: -40px !important;
+    }
+    .navbar-toggle{
+        border: none !important;  
+        transition: all ease-in-out 0.4s !important;
+    }
+    .navbar-toggle:hover{
+        background-color: #ef664d !important;
+        transition: all ease-in-out 0.4s !important;
+    }
+    .navbar-toggle span{
+        background-color: white !important;
+        padding: 1px !important;
+        transition: all ease-in-out 0.4s !important;
+    }
+    .navbar ul li a:hover::after{
+        width: 27% !important;
+    }
+    /*-- NAV END --*/ 
+    .carouseltxt{
+        padding: 0px 0px 0px 50px !important;
+        transition: all ease-in-out 0.4s !important;
+    }
+    .carousel-control .glyphicon{
+        display: none !important;
+    }
+    /*-- HEADER END --*/
+
+    /*-- ABOUT START --*/
+    .aboutitle{
+        padding-bottom: 20px !important;
+    }
+    /*-- ABOUT END --*/
+
+    /*-- WORKS START --*/
+    .tabtexi{
+        font-size: 12px !important;
+        transition: all ease-in-out 0.4 !important;
+    }
+    .tabsback{
+        background: none !important;
+        transition: all ease-in-out 0.4 !important;
+    }
+    /*-- WORKS END --*/
+
+    /*-- SERVICES START --*/
+    .servicestab p{
+        padding-bottom: 30px !important;
+        transition: all ease-in-out 0.4 !important;
+    }
+    /*-- SERVICES END --*/
+  }
+/* ========== MEDIA (540) END ========== */
+    
+/* ========== HEADER START ========== */
+#headerback{
+    background-image: url(Images/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10px;
+    transition: all ease-in-out 0.4s;
+    opacity: 1;
+}
+/*-- LOGO --*/
+.logo{
+    padding-top: 42px;
+    transition: all ease-in-out 0.4s;
+}
+.logo:hover{
+    transition: all ease-in-out 0.4s;
+}
+.logo:after{
+    content: "";
+    position: absolute;
+    background-color: #ef664d;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+.logo:hover::after{
+    width: 100%;
+}
+/*-- NAV START --*/
+.navbar{
+    padding-top: 38px;
+    background-color: transparent !important;
+    border: none !important;
+    transition: all ease-in-out 0.4s;
+}
+.navbar ul li{
+    padding-left: 20px;
+}
+.navbar ul li a{
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: white !important;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: all ease-in-out 0.4s;
+}
+.navbar ul li a:hover{
+    color: #ef664d !important;
+}
+.navbar ul li a.active{
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: #ef664d !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all ease-in-out 0.4s;
+}
+.navbar ul li a:after{
+    content: "";
+    position: absolute;
+    background-color: #ef664d;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: 8px;
+    transition: 0.3s;
+}
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+/*-- NAV END --*/
+
+/*-- CAROUSEL START --*/
+#carr li.active{
+    background-color: #ef664d !important;
+    border: none;
+    padding: 10px;
+}
+#carq{
+    transition: all ease-in-out 0.4s;
+    padding: 8px;
+    border: 2px solid white;
+}
+#carw{
+    transition: all ease-in-out 0.4s;
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+#care{
+    transition: all ease-in-out 0.4s;
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+.carouseltxt{
+    padding: 50px 0px 0px 50px;
+    text-align: center;
+    transition: all ease-in-out 0.4s;
+}
+.carouseltxt h1{
+    padding-top: 50px;
+    color: #eee;
+    font-family: 'Arvo';
+    text-transform: uppercase;
+    font-size: 33px;
+    transition: all ease-in-out 0.4s;
+}
+.carouseltxt h2{
+    color: #eee;
+    font-family: 'Arvo';
+    text-transform: uppercase;
+    font-size: 33px;
+    transition: all ease-in-out 0.4s;
+}
+.carouseltxt h2:last-child{
+    padding-bottom: 140px;
+    transition: all ease-in-out 0.4s;
+}
+.carouseltxt h2 span{
+    color: #ef664d;
+    transition: all ease-in-out 0.4s;
+    animation-name: caras;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+@keyframes caras{
+    0%   {color: white;}
+    50%  {color: #ef664d;}
+    100% {color: white;}
+  }
+.carousel-control{
+    background-image: none !important;
+    transition: all ease-in-out 0.4s;
+}
+.carousel-control .glyphicon{
+    position: absolute;
+    top: 50%;
+    transition: all ease-in-out 0.4s;
+}
+/*-- CAROUSEL END --*/
+
+/* ========== HEADER END ========== */
+
+/* ========== ABOUT START ========== */
+#about{
+    text-align: center;
+    padding-top: 20px;
+    transition: all ease-in-out 0.4s;
+}
+.abouttitle{
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--ttitle-color);
+    font-family: 'Arvo';
+    transition: all ease-in-out 0.4s;
+}
+.aboutimage img{
+    border-radius: 103px;
+    transition: all ease-in-out 0.4s;
+    animation-name: aboutas;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes aboutas{
+    0%   {border: 2px solid #ef664d;}
+    25%  {border: 2px solid #ffff66;}
+    50%  {border: 2px solid #339966;}
+    75%  {border: 2px solid #0066ff;}
+    100% {border: 2px solid #ef664d;}
+  }
+.abouttxt{
+    padding-top: 25px;
+    transition: all ease-in-out 0.4s;
+}
+.abouttxt p{
+    font-size: 15px;
+    color: var(--pp-color);
+    font-family: 'Open Sans';
+    transition: all ease-in-out 0.4s;
+}
+.putpresett{
+    padding-top: 40px;
+    transition: all ease-in-out 0.4s;
+}
+.putpreset{
+    padding-top: 15px;
+    transition: all ease-in-out 0.4s;
+}
+.put{
+    padding-bottom: 30px;
+    transition: all ease-in-out 0.4s;
+}
+.putname{
+    float: left;
+    transition: all ease-in-out 0.4s;
+}
+.putname h4{
+    font-size: 17px;
+    color: var(--hh4-color);
+    font-weight: bold;
+    transition: all ease-in-out 0.4s;
+}
+.putnumber p{
+    font-size: 17px;
+    color: var(--hh4-color);
+    font-weight: bold;
+    transition: all ease-in-out 0.4s;
+}
+.putnumber{
+    float: right;
+    padding-top: 10px;
+    transition: all ease-in-out 0.4s;
+}
+.skill{
+    width: 100%;
+    margin: 5px 0;
+    height: 14px;
+    background: #dedede;
+    transition: all ease-in-out 0.4s;
+}
+.meter{
+    height: 100%;
+    display: block;
+    width: 75%;
+    transition: all ease-in-out 0.4s;
+    animation-name: example;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   {background-color:#ef664d;}
+    25%  {background-color:#ffff66;}
+    50%  {background-color:#339966;}
+    75%  {background-color:#0066ff;}
+    100% {background-color:#ef664d;}
+  }
+.abouta{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    transition: all ease-in-out 0.4s;
+}
+/* ========== ABOUT END ========== */
+
+/* ========== WORKS START ========== */
+#worksback{
+    background-color: var(--second-color);
+    transition: all ease-in-out 0.4;
+}
+#workstitle{
+    text-align: center;
+    padding-top: 20px;
+    transition: all ease-in-out 0.4;
+}
+#workstitle h2{
+    font-weight: 400;
+    color: #ef664d;
+    font-size: 35px;
+    font-family: 'Arvo';
+    transition: all ease-in-out 0.4;
+}
+#workstxt{
+    padding-top: 10px;
+    text-align: center;
+    transition: all ease-in-out 0.4;
+}
+#workstxt p{
+    font-size: 15px;
+    color: #fefefe;
+    transition: all ease-in-out 0.4;
+}
+#workstabs{
+    padding-top: 20px;
+    transition: all ease-in-out 0.4;
+}
+.tabtexi{
+    color: white;
+    font-size: 15px;
+    font-family: 'Open Sans';
+    transition: all ease-in-out 0.4 !important;
+}
+.nav-tabs li.active a{
+    background: none !important;
+    border: none !important;
+    color: #ef664d !important;
+    transition: all ease-in-out 0.4 !important;
+}
+.nav-tabs {
+    border-bottom: none !important;
+    padding-bottom: 10px;
+    transition: all ease-in-out 0.4 !important;
+}
+.tabtexi:hover{
+    background-color: transparent !important;
+    color: #ef664d !important;
+    border: none !important;
+    transition: all ease-in-out 0.4 !important;
+}
+.tabsback{
+    background-image: url(Images/left.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px 20px 0;
+    transition: all ease-in-out 0.4;
+}
+.imagesm{
+    position: relative;
+    width: 100%;
+    transition: all ease-in-out 0.4;
+}
+.image{
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all ease-in-out 0.4;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+.imagesm:hover .overlay{
+    opacity: 1;
+    transition: all ease-in-out 0.4;
+}  
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: all ease-in-out 0.4;
+}
+.text:hover{
+    text-decoration: none;
+    color: white;
+    transition: all ease-in-out 0.4;
+}
+.tabbox2{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    transition: all ease-in-out 0.4;
+}
+.tabbox3{
+    padding-bottom: 20px;
+    transition: all ease-in-out 0.4;
+}
+.worka{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    transition: all ease-in-out 0.4;
+}
+/* ========== WORKS END ========== */
+
+/* ========== SERVICES START ========== */
+#servicestitle{
+    text-align: center;
+    padding-top: 20px;
+    transition: all ease-in-out 0.4;
+}
+#servicestitle h2{
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--ttitle-color);
+    font-family: 'Arvo';
+    transition: all ease-in-out 0.4;
+}
+#servicestxt{
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    transition: all ease-in-out 0.4;
+}
+#servicestxt p{
+    font-size: 15px;
+    color: var(--pp-color);
+    transition: all ease-in-out 0.4;
+    font-family: 'Open Sans';
+}
+.servicestab{
+    text-align: center;
+    transition: all ease-in-out 0.4;
+}
+#sertab1{
+    color: white;
+    border-radius: 80px;
+    padding: 30px;
+    font-size: 70px;
+    animation-name: ser1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    transition: all ease-in-out 0.4;
+}
+@keyframes ser1 {
+    0%   {background-color:#ef664d;}
+    25%  {background-color:#ffff66;}
+    50%  {background-color:#339966;}
+    75%  {background-color:#0066ff;}
+    100% {background-color:#ef664d;}
+  }
+#sertab2{
+    color: white;
+    background-color: #ef664d;
+    border-radius: 80px;
+    padding: 30px;
+    font-size: 70px;
+    animation-name: ser1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    transition: all ease-in-out 0.4;
+}
+#sertab3{
+    color: white;
+    background-color: #ef664d;
+    border-radius: 80px;
+    padding: 30px;
+    font-size: 70px;
+    animation-name: ser1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    transition: all ease-in-out 0.4;
+}
+.servicestab h4{
+    padding-top: 25px;
+    font-weight: bold;
+    color: var(--hh4-color);
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: all ease-in-out 0.4;
+}
+.servicestab p{
+    font-size: 15px;
+    color: var(--pp-color);
+    padding: 0 22px;
+    transition: all ease-in-out 0.4;
+}
+.servisa{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: all ease-in-out 0.4;
+}
+/* ========== SERVICES END ========== */
+
+/* ========== CONTACT START ========== */
+#contactback{
+    padding-top: 20px;
+    background: var(--second-color);
+    transition: all ease-in-out 0.4;
+}
+#contacttitle{
+    text-align: center;
+    transition: all ease-in-out 0.4;
+}
+#contacttitle h2{
+    font-weight: 400;
+    color: #ef664d;
+    font-family: 'Arvo';
+    font-size: 35px;
+    transition: all ease-in-out 0.4;
+}
+#contacttxt{
+    padding-top: 10px;
+    text-align: center;
+    transition: all ease-in-out 0.4;
+}
+#contacttxt p{
+    font-size: 15px;
+    color: #fefefe;
+    font-family: 'Open Sans';
+    transition: all ease-in-out 0.4;
+}
+#contacttab{
+    padding-top: 40px;
+    transition: all ease-in-out 0.4;
+}
+#contacttab a{
+    font-size: 20px;
+    color: white;
+    transition: all ease-in-out 0.4 !important;
+    padding-left: 15px;
+}
+#contacttab a:hover{
+    color: #ef664d;
+    transition: all ease-in-out 0.4 !important;
+}
+#contactform{
+    padding-top: 20px;
+    transition: all ease-in-out 0.4;
+    padding-bottom: 60px;
+    transition: all ease-in-out 0.4;
+}
+#fname{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid#d5d6d7;
+    font-size: 15px;
+    color: #d5d6d7;
+    text-transform: capitalize;
+    padding: 10px 0;
+    transition: all ease-in-out 0.4;
+}
+#phone{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid#d5d6d7;
+    font-size: 15px;
+    color: #d5d6d7;
+    text-transform: capitalize;
+    padding: 10px 0;
+    transition: all ease-in-out 0.4;
+}
+#email{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid#d5d6d7;
+    font-size: 15px;
+    color: #d5d6d7;
+    text-transform: capitalize;
+    padding: 10px 0;
+    transition: all ease-in-out 0.4;
+}
+#massage{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    resize: none;
+    border-bottom: 1px solid#d5d6d7;
+    font-size: 15px;
+    color: #d5d6d7;
+    text-transform: capitalize;
+    padding-top: 30px;
+    transition: all ease-in-out 0.4;
+}
+#submiti{
+    color: #ef664d;
+    background: none;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-left: 130px;
+    transition: all ease-in-out 0.4;
+}
+#submiti:hover{
+    color: white;
+    transition: all ease-in-out 0.4;
+}
+#footer{
+    border-top: 1px solid#55626f;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: all ease-in-out 0.4;
+}
+#footer p{
+    padding-top: 30px;
+    font-size: 17px;
+    color: #d5d6d7;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    transition: all ease-in-out 0.4;
+}
+#footer p a{
+    font-size: 19px;
+    color: #ef664d;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: all ease-in-out 0.4;
+}
+#footer p a:hover{
+    color: white;
+    text-decoration: underline;
+    transition: all ease-in-out 0.4;
+}
+#toTop {
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    border: none;
+    text-indent: 100%;
+    background: url(../images/to-top2.png) no-repeat 0px 0px;
+    transition: all ease-in-out 0.4;
+}
+/* ========== CONTACT END ========== */
